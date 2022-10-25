@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <script type="text/javascript" src="songlist.json"></script>
+  <!--<script type="text/javascript" src="songlist.json"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>CS 20 HW 7</title>
 </head>
 <body>
   <p id="demo">e</p>
   <script>
+    $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(json) {
+      console.log(json); 
+    });
     strSongList = JSON.stringify(songlist);
     document.getElementById("demo").innerHTML = strSongList;
   </script>
