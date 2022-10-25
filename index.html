@@ -7,9 +7,10 @@
   <title>CS 20 HW 7</title>
 </head>
 <body>
+  <p id="demo">e</p>
   <script>
     var mydata = JSON.parse(songlist);
-    alert(mydata[0].TITLE);
+    document.getElementById("demo").innerHTML = mydata.SONG[1].TITLE + " " + mydata.SONG[1].ARTIST;
   </script>
 </body>
 </html>
