@@ -11,11 +11,10 @@
   <p id="demo">e</p>
   <script>
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(json) {
-      //console.log(json);
-      alert(json);
+      console.log(JSON.stringify(json));
     });
-    strSongList = JSON.stringify(songlist);
-    document.getElementById("demo").innerHTML = strSongList;
+    //strSongList = JSON.stringify(songlist);
+    //document.getElementById("demo").innerHTML = strSongList;
   </script>
 </body>
 </html>
