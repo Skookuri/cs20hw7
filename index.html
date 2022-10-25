@@ -9,8 +9,8 @@
 <body>
   <p id="demo">e</p>
   <script>
-    var mydata = JSON.parse(songlist);
-    document.getElementById("demo").innerHTML = mydata.SONG[1].TITLE + " " + mydata.SONG[1].ARTIST;
+    strSongList = JSON.stringify(songlist);
+    document.getElementById("demo").innerHTML = strSongList;
   </script>
 </body>
 </html>
