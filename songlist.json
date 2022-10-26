@@ -4,121 +4,121 @@
       {
         "TITLE": "Niña Oh",
         "ARTIST": "Señor Kino",
-        "GENRE": "Mexican Indie, Mexican Rock, Sonora Indie, Surf Punk",
+        "GENRE": ["Mexican Indie", "Mexican Rock", "Sonora Indie", "Surf Punk"],
         "YEAR": 2018
       },
       {
         "TITLE": "Me Siento",
         "ARTIST": "Señor Kino",
-        "GENRE": "Mexican Indie, Mexican Rock, Sonora Indie, Surf Punk",
+        "GENRE": ["Mexican Indie", "Mexican Rock", "Sonora Indie", "Surf Punk"],
         "YEAR": 2017
       },
       {
         "TITLE": "Sonámbulo",
         "ARTIST": "Señor Kino",
-        "GENRE": "Mexican Indie, Mexican Rock, Sonora Indie, Surf Punk",
+        "GENRE": ["Mexican Indie", "Mexican Rock", "Sonora Indie", "Surf Punk"],
         "YEAR": 2018
       },
       {
         "TITLE": "Mamón",
         "ARTIST": "Señor Kino",
-        "GENRE": "Mexican Indie, Mexican Rock, Sonora Indie, Surf Punk",
+        "GENRE": ["Mexican Indie", "Mexican Rock", "Sonora Indie", "Surf Punk"],
         "YEAR": 2018
       },
       {
         "TITLE": "Unconditional",
         "ARTIST": "Magdalena Bay",
-        "GENRE": "Art Pop, Electropop, Escape Room, LA pop",
+        "GENRE": ["Art Pop", "Electropop", "Escape Room", "LA pop"],
         "YEAR": 2022
       },
       {
         "TITLE": "Neon",
         "ARTIST": "Magdalena Bay",
-        "GENRE": "Art Pop, Electropop, Escape Room, LA pop",
+        "GENRE": ["Art Pop", "Electropop", "Escape Room", "LA pop"],
         "YEAR": 2017
       },
       {
         "TITLE": "Oh Hell",
         "ARTIST": "Magdalena Bay",
-        "GENRE": "Art Pop, Electropop, Escape Room, LA pop",
+        "GENRE": ["Art Pop", "Electropop", "Escape Room", "LA pop"],
         "YEAR": 2020
       },
       {
         "TITLE": "I Don't Want To Cry Anymore",
         "ARTIST": "Magdalena Bay",
-        "GENRE": "Art Pop, Electropop, Escape Room, LA pop",
+        "GENRE": ["Art Pop", "Electropop", "Escape Room", "LA pop"],
         "YEAR": 2020
       },
       {
         "TITLE": "セカンド・ラヴ",
         "ARTIST": "Nakamori Akina",
-        "GENRE": "Idol Kayo, J-Pop, Japanese New Wave, Kayokyoku, Techno Kayo",
+        "GENRE": ["Idol Kayo", "J-Pop", "Japanese New Wave", "Kayokyoku", "Techno Kayo"],
         "YEAR": 1983
       },
       {
         "TITLE": "北ウイング",
         "ARTIST": "Nakamori Akina",
-        "GENRE": "Idol Kayo, J-Pop, Japanese New Wave, Kayokyoku, Techno Kayo",
+        "GENRE": ["Idol Kayo", "J-Pop", "Japanese New Wave", "Kayokyoku", "Techno Kayo"],
         "YEAR": 1984
       },
       {
         "TITLE": "飾りじゃないのよ涙は",
         "ARTIST": "Nakamori Akina",
-        "GENRE": "Idol Kayo, J-Pop, Japanese New Wave, Kayokyoku, Techno Kayo",
+        "GENRE": ["Idol Kayo", "J-Pop", "Japanese New Wave", "Kayokyoku", "Techno Kayo"],
         "YEAR": 1985
       },
       {
         "TITLE": "スローモーション",
         "ARTIST": "Nakamori Akina",
-        "GENRE": "Idol Kayo, J-Pop, Japanese New Wave, Kayokyoku, Techno Kayo",
+        "GENRE": ["Idol Kayo", "J-Pop", "Japanese New Wave", "Kayokyoku", "Techno Kayo"],
         "YEAR": 1982
       },
       {
         "TITLE": "Femme",
         "ARTIST": "Le Couleur",
-        "GENRE": "Electropop",
+        "GENRE": ["Electropop"],
         "YEAR": 2013
       },
       {
         "TITLE": "Voyage Amoureux",
         "ARTIST": "Le Couleur",
-        "GENRE": "Electropop",
+        "GENRE": ["Electropop"],
         "YEAR": 2013
       },
       {
         "TITLE": "Deux et 2",
         "ARTIST": "Le Couleur",
-        "GENRE": "Electropop",
+        "GENRE": ["Electropop"],
         "YEAR": 2008
       },
       {
         "TITLE": "L’amour le jour",
         "ARTIST": "Le Couleur",
-        "GENRE": "Electropop",
+        "GENRE": ["Electropop"],
         "YEAR": 2016
       },
       {
         "TITLE": "Mere Mehboob Mere Sanam",
         "ARTIST": "Udit Narayan, Alka Yagnik",
-        "GENRE": "Filmi, Desi Pop, Classic Bollywood, Chutney, Hare Krishna",
+        "GENRE": ["Filmi", "Desi Pop", "Classic Bollywood", "Chutney", "Hare Krishna"],
         "YEAR": 1998
       },
       {
         "TITLE": "Ruk Ja O Dil Deewane",
         "ARTIST": "Udit Narayan",
-        "GENRE": "Chutney, Classic Bollywood, Desi Pop, Filmi",
+        "GENRE": ["Chutney", "Classic Bollywood", "Desi Pop", "Filmi"],
         "YEAR": 1995
       },
       {
         "TITLE": "Dil To Pagal Hai",
         "ARTIST": "Uttam Singh, Lata Mangeshkar, Udit Narayan, Anand Bakshi",
-        "GENRE": "Classic Bollywood, Filmi, Desi Pop, Modern Bollywood, Lata",
+        "GENRE": ["Classic Bollywood", "Filmi", "Desi Pop", "Modern Bollywood", "Lata"],
         "YEAR": 1997
       },
       {
         "TITLE": "Main Yahaan Hoon",
         "ARTIST": "Madan Mohan, Udit Narayan, Javed Akhtar",
-        "GENRE": "Filmi, Classic Bollywood, Desi Pop, Indian Instrumental, Modern Bollywood",
+        "GENRE": ["Filmi", "Classic Bollywood", "Desi Pop", "Indian Instrumental", "Modern Bollywood"],
         "YEAR": 2004
       }
     ]
