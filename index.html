@@ -8,38 +8,62 @@
   <title>CS 20 HW 7</title>
 </head>
 <body>
-  <div class="mypanel"></div>
+  <p id="demo"></p>
+  <table id="mytable">
+  	<th id="songtitle">Title</th>
+    <th id="songartist">Artist</th>
+    <th id="songgenre">Genre</th>
+    <th id="songyear">Year</th>
+  </table>
   <script>
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(data) {
-      alert(JSON.stringify(data));
+      /*alert(JSON.stringify(data));
+      alert(JSON.stringify(data.CATALOG.SONG));
       alert(JSON.stringify(data.CATALOG.SONG[0]));
-      //console.log(JSON.stringify(data));
-
-      $(document).ready(function () {
-          var html = '<table class="table table-striped">';
-          html += '<tr>';
-          var flag = 0;
-          $.each(data.CATALOG.SONG[0], function(index, value) {
-              html += '<th>'+index+'</th>';
-          });
-          html += '</tr>';
-        
-          $.each(data, function(index, value) {
-                html += '<tr>';
-                $.each(value, function(index2, value2){
-                html += '<td>'+value2+'</td>';
-                });
-                html += '<tr>';
-          });
-        
-          html += '</table>';
-          $('body').html(html);
+      alert(JSON.stringify(data.CATALOG.SONG[0].ARTIST));
+      alert(JSON.stringify(data.CATALOG.SONG[0].TITLE));
+      alert(JSON.stringify(data.CATALOG.SONG[0].GENRE));*/
+      
+      //var artist2 = JSON.stringify(data.CATALOG.SONG[0].ARTIST);
+      //document.getElementById("demo").innerHTML = artist2;
+      
+      
+     
+      //var newrow = document.getElementById("myTable").insertRow(1);
+      //newrow.innerHTML "e" + JSON.stringify(data.CATALOG.SONG[0].ARTIST) + "e";
+      //newrow.innerHTML = "<td>" + artis + "<td>"
+      
+      
+      var arr = data.CATALOG.SONG;
+      
+      let text = ""
+      
+      arr.forEach(function(list) {
+      	//var newcell = document.getElementById("myTable").insertCell(-1);
+      	console.log('ARTIST: ' + list.ARTIST);
+      	console.log('TITLE: ' + list.TITLE);
+      	console.log('GENRE: ' + list.GENRE);
+      	console.log('YEAR: ' + list.YEAR);
       });
       
-      /*for (var i = 0; i < data.CATALOG.SONG.length; i++) {
-        document.write
+      
+      function myFunction(item) {
+      	text += index + ": " + item + "<br>"; 
+      }
+      
+      /*for (var i; i < data.CATALOG.SONG.length; i++) {
+      	var artist3 = JSON.stringify(data.CATALOG.SONG[i].ARTIST);
+      	document.getElementById("demo").innerHTML = artist3;
+        
+        var title1 = JSON.stringify(data.CATALOG.SONG[i].TITLE);
+      	document.getElementById("mytable").insertCell(i).innerhtml= title1;
       }*/
-      });
+      
+      
+    });
+    
+    
+    
   </script>
 </body>
 </html>
