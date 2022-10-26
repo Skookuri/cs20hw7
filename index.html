@@ -15,8 +15,24 @@
       alert(JSON.stringify(data.CATALOG.SONG[0]));
       //console.log(JSON.stringify(data));
       
-      var text =    `Catalog Info: ${data.CATALOG}<br>`
-      $(".mypanel").html(text);
+      /*var text =    `Catalog Info: ${data.CATALOG}<br>`
+      $(".mypanel").html(text);*/
+      var songs = [];
+      document.write("<table border==\"1\"><tr>");
+      
+      for (song in data[0]) {
+        document.write('<td>' + song + '</td>');
+      }
+      document.write("</tr>");
+      
+      for (var i = 0; i < data.length; i++) {
+        document.write('<tr>');
+        for (song in data[i]) {
+          document.write('<td>' + data[i][song] + '</td>');
+        }
+        document.write('</tr>');
+      }
+      document.write("</table>");
     });
   </script>
 </body>
