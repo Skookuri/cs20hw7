@@ -6,15 +6,32 @@
   <!--<script type="text/javascript" src="songlist.json"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>CS 20 HW 7</title>
+  <style>
+  	table, td {
+  		border: 1px solid black;
+	}
+  </style>
 </head>
 <body>
-  <p id="demo"></p>
+  <select>
+    <option value="selectgenre">--SELECT GENRE--</option>
+    <option value="hello">hello</option>
+  	<option value="world">world</option>
+  	<option value="lorem">lorem</option>
+  	<option value="ipsum">ipsum</option>
+  	<option value="lorem ipsum">lorem ipsum</option>
+  </select>
+  <br>
+  <button>FILTER</button>
+  <br>
+  <br>
   <table id="mytable">
   	<th id="songtitle">Title</th>
     <th id="songartist">Artist</th>
     <th id="songgenre">Genre</th>
     <th id="songyear">Year</th>
   </table>
+  
   <script>
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(data) {
      
@@ -30,12 +47,33 @@
         artistcell.innerHTML = list.ARTIST;
   
         var genrecell = newrow.insertCell(2);
-         genrecell.innerHTML = list.GENRE;
+        var genretable = document.createElement('table');
+        genrecell.appendChild(genretable);
+        
+        var arrgenre = list.GENRE;
+        
+        arrgenre.forEach(function(genrelist) {
+        	var genrerow = genretable.insertRow(-1);
+            //genrerow.innerHTML = genrelist;
+            genrerow.innerHTML = "";
+            //genrerow.innerHTML = genrelist;
+            
+            var genresubcell = genrerow.insertCell(0);
+            genresubcell.innerHTML = genrelist;
+        });
   
         var yearcell = newrow.insertCell(3);
         yearcell.innerHTML = list.YEAR;
       });
       
+      
+      $(document).ready(function(){
+      	$("select").change(function() {
+        	$("button").click(function(){
+            	alert("hi");
+            });
+        });
+      });
     });
   </script>
 </body>
