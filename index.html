@@ -17,53 +17,26 @@
   </table>
   <script>
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(data) {
-      /*alert(JSON.stringify(data));
-      alert(JSON.stringify(data.CATALOG.SONG));
-      alert(JSON.stringify(data.CATALOG.SONG[0]));
-      alert(JSON.stringify(data.CATALOG.SONG[0].ARTIST));
-      alert(JSON.stringify(data.CATALOG.SONG[0].TITLE));
-      alert(JSON.stringify(data.CATALOG.SONG[0].GENRE));*/
-      
-      //var artist2 = JSON.stringify(data.CATALOG.SONG[0].ARTIST);
-      //document.getElementById("demo").innerHTML = artist2;
-      
-      
      
-      //var newrow = document.getElementById("myTable").insertRow(1);
-      //newrow.innerHTML "e" + JSON.stringify(data.CATALOG.SONG[0].ARTIST) + "e";
-      //newrow.innerHTML = "<td>" + artis + "<td>"
-      
-      
       var arr = data.CATALOG.SONG;
-      
-      let text = ""
-      
       arr.forEach(function(list) {
-      	//var newcell = document.getElementById("myTable").insertCell(-1);
-      	console.log('ARTIST: ' + list.ARTIST);
-      	console.log('TITLE: ' + list.TITLE);
-      	console.log('GENRE: ' + list.GENRE);
-      	console.log('YEAR: ' + list.YEAR);
+      	var newrow = document.getElementById("mytable").insertRow(-1);
+        newrow.innerHTML = "";
+        
+        var titlecell = newrow.insertCell(0);
+        titlecell.innerHTML = list.TITLE;
+  
+        var artistcell = newrow.insertCell(1);
+        artistcell.innerHTML = list.ARTIST;
+  
+        var genrecell = newrow.insertCell(2);
+         genrecell.innerHTML = list.GENRE;
+  
+        var yearcell = newrow.insertCell(3);
+        yearcell.innerHTML = list.YEAR;
       });
       
-      
-      function myFunction(item) {
-      	text += index + ": " + item + "<br>"; 
-      }
-      
-      /*for (var i; i < data.CATALOG.SONG.length; i++) {
-      	var artist3 = JSON.stringify(data.CATALOG.SONG[i].ARTIST);
-      	document.getElementById("demo").innerHTML = artist3;
-        
-        var title1 = JSON.stringify(data.CATALOG.SONG[i].TITLE);
-      	document.getElementById("mytable").insertCell(i).innerhtml= title1;
-      }*/
-      
-      
     });
-    
-    
-    
   </script>
 </body>
 </html>
