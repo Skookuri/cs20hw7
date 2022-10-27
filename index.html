@@ -140,10 +140,10 @@
             $("#myactualtable tr").filter(function() {
                 var value = $("select option:selected").text();
                 
-                if (value == "--SELECT GENRE--") {
-                	$.isReady = true;
+                if (value != "--SELECT GENRE--") {
+                	$(this).toggle($(this).text().indexOf(value) > -1);
                 } else {
-                	$(this).toggle($(this).text().indexOf(value) > -1)
+                	$(this).show();
                 }
     		}); //toggle
         }); //button
