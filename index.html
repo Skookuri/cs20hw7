@@ -7,13 +7,56 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>CS 20 HW 7</title>
   <style>
+  
+  	select {
+    	color: #FF69B4;
+        background-color: #000000;
+        border-color: #FF69B4;
+    }
+    
+  	button {
+    	color: #FF69B4;
+        background-color: #000000;
+        border-color: #FF69B4;
+    }
+    
+    body {
+    	background-color: #000000;
+        color: #FF69B4;
+        text-align: center;
+    }
+    
   	table, td {
-  		border: 1px solid black;
+  		border: 1px solid #000000;
 	}
+    
+    td:hover {
+    	background-color: #FF69B4;
+        color: #000000;
+    }
+    
+    tr:hover {
+    	background-color: #ffcce6;
+        color: #000000; 
+    }
     
     th {
     	font-size: 30px;
     }
+    
+    table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+     	width: 100%;
+    }
+
+    td, th {
+    	border: 1px solid #FF69B4;
+    	text-align: left;
+    	padding: 8px;
+    }
+
+
   </style>
 </head>
 <body>
@@ -41,6 +84,7 @@
     <option value="lata">Lata</option>
     <option value="indianinstrumental">Indian Instrumental</option>
   </select>
+  <br>
   <br>
   <button>FILTER</button>
   <br>
@@ -95,35 +139,13 @@
             
             $("#myactualtable tr").filter(function() {
                 var value = $("select option:selected").text();
-                /*if (value != "--SELECT GENRE--") {
-                	
-                } else {
-                	$("#myactualtable td").show();
-                }*/
-                
                 
                 if (value == "--SELECT GENRE--") {
-                	$("#mytable").show();
+                	$.isReady = true;
                 } else {
                 	$(this).toggle($(this).text().indexOf(value) > -1)
                 }
-    		})
-            /*arr.forEach(function(genresearch) {
-                genresearch.GENRE.forEach(function(indsearch) {
-                    /*if (indsearch == $("select option:selected").text()) {
-                        
-                        document.querySelector("#mytable > tbody > tr:nth-child(2)").show()
-                        //$(this).closest("table").css({"color": "red", "border": "2px solid red"});
-                	} else if ($("select option:selected").text() == "--SELECT GENRE--") {
-                    	$("#mytable td").show();
-                    }
-                    
-                    
-                    
-                });//for each2 ; hide non related genres
-                
-                
-            });*/ //for each1
+    		}); //toggle
         }); //button
       }); //document ready
     }); //json
