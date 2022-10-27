@@ -46,10 +46,11 @@
   <br>
   <br>
   <table id="mytable">
-  	<th id="songtitle">Title</th>
+    <th id="songtitle">Title</th>
     <th id="songartist">Artist</th>
     <th id="songgenre">Genre</th>
     <th id="songyear">Year</th>
+    <tbody id="myactualtable"></tbody>
   </table>
   
   
@@ -57,8 +58,10 @@
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(data) {
      
       var arr = data.CATALOG.SONG;
+      //var tablebody = document.createElement('tbody');
+      
       arr.forEach(function(list) {
-      	var newrow = document.getElementById("mytable").insertRow(-1);
+      	var newrow = document.getElementById("myactualtable").insertRow(-1);
         newrow.innerHTML = "";
         
         var titlecell = newrow.insertCell(0);
@@ -88,27 +91,39 @@
       
       $(document).ready(function(){ 
         $("button").click(function(){
-        	$("#mytable td").hide();
-            //alert();
-            arr.forEach(function(genresearch) {
+        	//$("#mytable td").hide();
+            
+            $("#myactualtable tr").filter(function() {
+                var value = $("select option:selected").text();
+                /*if (value != "--SELECT GENRE--") {
+                	
+                } else {
+                	$("#myactualtable td").show();
+                }*/
+                
+                
+                if (value == "--SELECT GENRE--") {
+                	$("#mytable").show();
+                } else {
+                	$(this).toggle($(this).text().indexOf(value) > -1)
+                }
+    		})
+            /*arr.forEach(function(genresearch) {
                 genresearch.GENRE.forEach(function(indsearch) {
-                    if (indsearch == $("select option:selected").text()) {
-                        alert($(this).closest("tr"));
-                        //alert($(this).parent());
-                        //$(this).closest("tr").show();
-                        //alert("done")
-                        //$(this).show();
+                    /*if (indsearch == $("select option:selected").text()) {
+                        
+                        document.querySelector("#mytable > tbody > tr:nth-child(2)").show()
+                        //$(this).closest("table").css({"color": "red", "border": "2px solid red"});
                 	} else if ($("select option:selected").text() == "--SELECT GENRE--") {
                     	$("#mytable td").show();
                     }
                     
-                    /*for (var i = 0; i < indsearch.length; i++) {
-                		alert(indsearch[i]);
-                	}*/
+                    
+                    
                 });//for each2 ; hide non related genres
                 
                 
-            }); //for each1
+            });*/ //for each1
         }); //button
       }); //document ready
     }); //json
