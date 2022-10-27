@@ -10,16 +10,36 @@
   	table, td {
   		border: 1px solid black;
 	}
+    
+    th {
+    	font-size: 30px;
+    }
   </style>
 </head>
 <body>
   <select>
     <option value="selectgenre">--SELECT GENRE--</option>
-    <option value="hello">hello</option>
-  	<option value="world">world</option>
-  	<option value="lorem">lorem</option>
-  	<option value="ipsum">ipsum</option>
-  	<option value="lorem ipsum">lorem ipsum</option>
+    <option value="mexicanindie">Mexican Indie</option>
+  	<option value="mexicanrock">Mexican Rock</option>
+  	<option value="sonoraindie">Sonora Indie</option>
+  	<option value="surfpunk">Surf Punk</option>
+    <option value="artpop">Art Pop</option>
+    <option value="electropop">Electropop</option>
+    <option value="escaperoom">Escape Room</option>
+    <option value="lapop">LA pop</option>
+    <option value="idolkayo">Idol Kayo</option>
+    <option value="jpop">J-Pop</option>
+    <option value="japanesenewwave">Japanese New Wave</option>
+  	<option value="kayokyoku">Kayokyoku</option>
+    <option value="technokayo">Techno Kayo</option>
+    <option value="filmi">Filmi</option>
+    <option value="desipop">Desi Pop</option>
+    <option value="classicbollywood">Classic Bollywood</option>
+    <option value="chutney">Chutney</option>
+    <option value="harekrishna">Hare Krishna</option>
+    <option value="modernbollywood">Modern Bollywood</option>
+    <option value="lata">Lata</option>
+    <option value="indianinstrumental">Indian Instrumental</option>
   </select>
   <br>
   <button>FILTER</button>
@@ -31,6 +51,7 @@
     <th id="songgenre">Genre</th>
     <th id="songyear">Year</th>
   </table>
+  
   
   <script>
     $.getJSON("https://skookuri.github.io/cs20hw7/songlist.json", function(data) {
@@ -54,9 +75,7 @@
         
         arrgenre.forEach(function(genrelist) {
         	var genrerow = genretable.insertRow(-1);
-            //genrerow.innerHTML = genrelist;
             genrerow.innerHTML = "";
-            //genrerow.innerHTML = genrelist;
             
             var genresubcell = genrerow.insertCell(0);
             genresubcell.innerHTML = genrelist;
@@ -67,14 +86,32 @@
       });
       
       
-      $(document).ready(function(){
-      	$("select").change(function() {
-        	$("button").click(function(){
-            	alert("hi");
-            });
-        });
-      });
-    });
+      $(document).ready(function(){ 
+        $("button").click(function(){
+        	$("#mytable td").hide();
+            //alert();
+            arr.forEach(function(genresearch) {
+                genresearch.GENRE.forEach(function(indsearch) {
+                    if (indsearch == $("select option:selected").text()) {
+                        alert($(this).closest("tr"));
+                        //alert($(this).parent());
+                        //$(this).closest("tr").show();
+                        //alert("done")
+                        //$(this).show();
+                	} else if ($("select option:selected").text() == "--SELECT GENRE--") {
+                    	$("#mytable td").show();
+                    }
+                    
+                    /*for (var i = 0; i < indsearch.length; i++) {
+                		alert(indsearch[i]);
+                	}*/
+                });//for each2 ; hide non related genres
+                
+                
+            }); //for each1
+        }); //button
+      }); //document ready
+    }); //json
   </script>
 </body>
 </html>
